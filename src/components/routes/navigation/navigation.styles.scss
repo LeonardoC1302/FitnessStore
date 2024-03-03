@@ -29,7 +29,8 @@
         padding: 1rem 0;
         cursor: pointer;
         color: #F6F6F6;
-        // Hover effect: Border extends from left to right
+        border-bottom: 2px solid transparent;
+
         &:hover{
           border-bottom: 2px solid #F6F6F6;
         }
