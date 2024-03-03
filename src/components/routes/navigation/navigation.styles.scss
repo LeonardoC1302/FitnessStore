@@ -1,15 +1,19 @@
 .navigation {
-    height: 70px;
+    height: 100px;
     width: 100%;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 25px;
+    margin-bottom: 2.5rem;
+    background-color: #212121;
+    padding: 0 2rem;
   
     &__logo {
-        padding: 25px;
+        padding: 2.5rem;
         img{
-            height: 100%;
-            width: 70px;
+            height: 90%;
+            width: auto;
+            // Invert colors
+            filter: invert(1);
         }
     }
   
@@ -19,10 +23,16 @@
       display: flex;
       align-items: center;
       justify-content: flex-end;
+      gap: 2rem;
   
       .nav-link {
-        padding: 10px 15px;
+        padding: 1rem 0;
         cursor: pointer;
+        color: #F6F6F6;
+        // Hover effect: Border extends from left to right
+        &:hover{
+          border-bottom: 2px solid #F6F6F6;
+        }
       }
     }
   }

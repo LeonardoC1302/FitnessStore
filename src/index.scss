@@ -9,6 +9,7 @@ html {
 body {
   font-family: "Lato", sans-serif;
   font-size: 1.8rem;
+  margin: 0;
 }
 a {
   text-decoration: none;
@@ -19,15 +20,13 @@ img {
   height: auto;
 }
 
+
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
+    color: #212121;
+    background-color: #F6F6F6;
   }
   button {
-    background-color: #f9f9f9;
+    background-color: #F6F6F6;
   }
 }
