@@ -1,0 +1,60 @@
+$main-color: #212121;
+$secondary-color: #F6F6F6;
+$accent-color: #6D9886;
+$font: "Lato", sans-serif;
+
+.button-container {
+    min-width: 165px;
+    width: auto;
+    height: 50px;
+    letter-spacing: 0.5px;
+    line-height: 50px;
+    padding: 0 35px 0 35px;
+    font-size: 15px;
+    background-color: $main-color;
+    color: $secondary-color;
+    text-transform: uppercase;
+    font-family: $font;
+    font-weight: bolder;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+  
+    &:hover {
+      background-color: $secondary-color;
+      color: $main-color;
+      border: 1px solid $main-color;
+    }
+  
+    &.google-sign-in {
+      background-color: $accent-color;
+      color: $secondary-color;
+
+      &::before{
+        font-family: "Font Awesome 6 Brands";
+        content: '\f1a0';
+        width: 2rem;
+        height: 2rem;
+        margin-right: .5rem;
+      }
+  
+      &:hover {
+        background-color: darken($accent-color, 5%);
+        border: none;
+      }
+    }
+  
+    &.inverted {
+      background-color: $secondary-color;
+      color: $main-color;
+      border: 1px solid $main-color;
+  
+      &:hover {
+        background-color: $main-color;
+        color: $secondary-color;
+        border: none;
+      }
+    }
+  }
+  
