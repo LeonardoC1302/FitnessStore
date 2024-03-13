@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import Categories from '../../categories/categories.component'
+import Categories from '../../components/categories/categories.component'
 
 function Home() {
   const categories = [
