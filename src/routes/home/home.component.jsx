@@ -16,7 +16,7 @@ function Home() {
     {
       id: 3,
       title: 'Wellness',
-      imageUrl: 'https://i.ibb.co/wgyjJ1L/wellness.jpg'
+      imageUrl: 'https://i.ibb.co/0cRWDrp/wellness.jpg'
     },
     {
       id: 4,
@@ -26,7 +26,7 @@ function Home() {
     {
       id: 5,
       title: 'Accesories',
-      imageUrl: 'https://i.ibb.co/rwyQmF1/clothes.jpg'
+      imageUrl: 'https://i.ibb.co/4M81C57/clothes.jpg'
     }
   ]
 
