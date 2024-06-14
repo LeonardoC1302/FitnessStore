@@ -5,6 +5,7 @@ export const CartDropdownContext = createContext({
     setHidden: () => {},
     cartItems: [],
     addItemToCart: () => {},
+    cartCount: 0
 });
 
 const addCartItem = (cartItems, productToAdd) => {
@@ -20,12 +21,18 @@ const addCartItem = (cartItems, productToAdd) => {
 export const CartDropdownProvider = ({children}) => {
     const [isHidden, setHidden] = useState(true);
     const [cartItems, setCartItems] = useState([]);
+    const [cartCount, setCartCount] = useState(0);
+
+    useEffect(() => {
+        const newCartCount = cartItems.reduce((total, cartItem) => total + cartItem.quantity, 0);
+        setCartCount(newCartCount);
+    }, [cartItems])
 
     const addItemToCart = (productToAdd) => {
         setCartItems(addCartItem(cartItems, productToAdd));
     }
 
-    const value = { isHidden, setHidden, addItemToCart, cartItems };
+    const value = { isHidden, setHidden, addItemToCart, cartItems, cartCount };
 
     return <CartDropdownContext.Provider value={value}>{children}</CartDropdownContext.Provider>
 }
