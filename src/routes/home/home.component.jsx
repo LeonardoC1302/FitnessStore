@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import Categories from '../../components/categories/categories.component'
+import Directory from '../../components/directory/directory.component';
 
 function Home() {
   const categories = [
@@ -25,13 +25,13 @@ function Home() {
     },
     {
       id: 5,
-      title: 'Accesories',
+      title: 'Accessories',
       imageUrl: 'https://i.ibb.co/4M81C57/clothes.jpg'
     }
   ]
 
   return (
-    <Categories categories={categories} />
+    <Directory categories={categories} />
   )
 }
 
