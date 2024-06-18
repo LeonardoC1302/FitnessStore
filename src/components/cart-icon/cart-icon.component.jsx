@@ -1,6 +1,6 @@
 import { useContext } from 'react';
-import ShoppingIcon from '../../assets/shopping-bag.svg'
-import './cart-icon.styles.scss';
+import { ShoppingIcon, CartIconContainer, ItemCount } from './cart-icon.styles';
+import ShoppingSvg from '../../assets/shopping-bag.svg'
 import { CartDropdownContext } from '../../contexts/cart-dropdown.context';
 
 function CartIcon() {
@@ -8,10 +8,10 @@ function CartIcon() {
 
     const toggleIsHidden = () => setHidden(!isHidden);
     return (
-        <div className='cart-icon-container' onClick={toggleIsHidden}>
-            <img src={ShoppingIcon} alt='Shopping Icon' className="shopping-icon" />
-            <p className='item-count'>{cartCount}</p>
-        </div>
+        <CartIconContainer onClick={toggleIsHidden}>
+            <ShoppingIcon src={ShoppingSvg} alt='Shopping Icon' className="shopping-icon" />
+            <ItemCount>{cartCount}</ItemCount>
+        </CartIconContainer>
     )
 };
 
